@@ -13,9 +13,6 @@ To prevent excessively long games, each game has a default duration of 10 minute
 <li><a href="#playing-the-game">Interacting with game</a></li>
 </ol>
 
-# ⚠️ Version
-This project was developed using the Soroban SDK and Soroban CLI version 0.9.4. Please note that it is not compatible with earlier versions and may not be compatible with future releases
-
 
 # Contracts
 
@@ -193,8 +190,6 @@ soroban contract deploy \
     --source alice \
     --network futurenet
 ```
-This will return the Address the the deployer contract
-Eg: CANQ55GIJUEVKFCMDTR43PEXKMCDIU77AWCATVRIVZKY5HM2XF3CKDK5
 
 ### Install WASM Game file
 ```
@@ -203,14 +198,12 @@ soroban contract install \
     --source alice \
     --network futurenet
 ```
-This will return the id of the game
-Eg: 010dab4c6fa53e9d9e673e0319d23d682ad352ea4b6b75726ed2e92fb7e30c96
 
 ### Deploy new instances of the game
 id: Manager Contract Address
 wasm_hash: hash returned from the installation of the game
 salt: BytesN<32> salt, make sure no to use the same salt twice 
-public_key_type_ed25519: Address of the players as Hex, see [Convert Address into Hex](#utils)
+public_key_type_ed25519: Address of the players as Hex
 ```
 soroban contract invoke \
     --id CANQ55GIJUEVKFCMDTR43PEXKMCDIU77AWCATVRIVZKY5HM2XF3CKDK5 \
@@ -221,8 +214,6 @@ soroban contract invoke \
     --wasm_hash 010dab4c6fa53e9d9e673e0319d23d682ad352ea4b6b75726ed2e92fb7e30c96 \
     --init_args '[{"address":{"account":{"public_key_type_ed25519":"f7ae197b456edc70d1e25d643403dc4f86d70de2e7c39f9017c533b7f9484f4e"}}}, {"address":{"account":{"public_key_type_ed25519":"097550c7985a8b04704215307fec174bbfa9b9aea3fb545e0d92d70ce403bccf"}}}]'
 ```
-This will return the Contract Address of the game
-Eg: CC6JF7LCBH7B57KBUUG7Q5DFFEGXUENME445H4WBSYLDF6IB3M3BCD7I
 
 <br />
 
