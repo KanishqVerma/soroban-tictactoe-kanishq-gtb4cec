@@ -9,8 +9,6 @@ To prevent excessively long games, each game has a default duration of 10 minute
 <ol>
 <li><a href="#functions">Functions</a></li>
 <li><a href="#install">Install and Build</a></li>
-<li><a href="#deployment-to-futurenet">Deployment</a></li>
-<li><a href="#playing-the-game">Interacting with game</a></li>
 </ol>
 
 
